@@ -11,7 +11,7 @@ public class NotificationCommandService(INotificationRepository notificationRepo
     public async Task<Notification?> Handle(CreateNotificationCommand command)
     {
         var notification = new Notification(command.Id, command.Title, command.Description);
-        await notificationRepository.AddSync(notification);
+        await notificationRepository.AddAsync(notification);
         await unitOfWork.CompleteAsync();
         return notification;
     }
