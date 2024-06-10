@@ -21,10 +21,10 @@
 
     <ItemGroup>
       <Folder Include="Shared\Interfaces\" />
-      <Folder Include="Tracking\Application\" />
-      <Folder Include="Tracking\Domain\" />
-      <Folder Include="Tracking\Infrastructure\" />
-      <Folder Include="Tracking\Interfaces\" />
+      <Folder Include="Tracking\Application\Internal\OutboundServices\ACL\" />
+      <Folder Include="Tracking\Interfaces\ACL\Services\" />
+      <Folder Include="Tracking\Interfaces\REST\Resource\" />
+      <Folder Include="Tracking\Interfaces\REST\Transform\" />
     </ItemGroup>
 
 </Project>

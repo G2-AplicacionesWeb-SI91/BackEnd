@@ -5,40 +5,109 @@
     <projectFile profileName="http">backend/backend.csproj</projectFile>
     <projectFile profileName="https">backend/backend.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd8b2ff-c063-4e4d-b433-d83d8d139dd6" name="Changes" comment="" />
+    <list default="true" id="2dd8b2ff-c063-4e4d-b433-d83d8d139dd6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/AddLocationCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/CancelTrackingCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/PauseTrackingCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/ResumeTrackingCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/StartTrackingCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/StopTrackingCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/QueryService/GetAllRoutesQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/QueryService/GetRouteByIdQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Application/Internal/QueryService/GetRoutesByDateRangeQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Aggregates/BusRoute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Aggregates/Location.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Aggregates/Route.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/AddLocationCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/CancelTrackingCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/PauseTrackingCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/ResumeTrackingCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/StartTrackingCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/StopTrackingCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Entities/BusRoute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Entities/Location.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Queries/GetAllRoutesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Queries/GetRouteByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Queries/GetRoutesByDateRangeQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/BusRouteStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/GeoCoordinate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/ITrackeable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/TimeRange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Repositories/IRouteRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Domain/Services/EventStore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Infrastructure/Persistence/EFC/Repositories/EFRouteRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Tracking/Infrastructure/Persistence/EFC/TrackingDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/G2-AplicacionesWeb-SI91/backend.git",
-    "accountId": "e1393459-45ae-4ddd-b967-adc509d3ffa0"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ArianRM&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/G2-AplicacionesWeb-SI91/backend.git&quot;,
+    &quot;accountId&quot;: &quot;e1393459-45ae-4ddd-b967-adc509d3ffa0&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/3f1acb59718cadf111a0a796681e3d3509bb3381/src/Http/Routing/src/Route.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2hUJxI8czGLe156D1kxkVD6XRNV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.backend: IIS Express.executor": "Run",
+    ".NET Launch Settings Profile.backend: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\ARIAN\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\ARIAN\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\ARIAN\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.backend: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.backend: http">
     <configuration name="backend: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/backend/backend.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -93,7 +162,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717642968503</updated>
-      <workItem from="1717642971275" duration="294000" />
+      <workItem from="1717642971275" duration="485000" />
+      <workItem from="1717910982236" duration="13751000" />
+      <workItem from="1717968611434" duration="10631000" />
     </task>
     <servers />
   </component>
