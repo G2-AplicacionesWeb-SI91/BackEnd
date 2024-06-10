@@ -20,6 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Promos\Interface\" />
       <Folder Include="Shared\Interfaces\" />
       <Folder Include="Tracking\Application\" />
       <Folder Include="Tracking\Domain\" />
