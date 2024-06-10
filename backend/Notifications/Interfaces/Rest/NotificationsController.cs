@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace backend.Notifications.Interfaces.Rest;
 
 [ApiController]
-[Route("api/v1/[controller]")]
+[Route("api/v1/notifications")]
 public class NotificationsController(INotificationCommandService notificationCommandService, INotificationQueryService notificationQueryService) : ControllerBase
 {
     [HttpPost]
