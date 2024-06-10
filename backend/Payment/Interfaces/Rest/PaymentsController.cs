@@ -38,7 +38,7 @@ public class PaymentsController(IPaymentCommandService paymentCommandService, IP
         return Ok(resources);
     }
     
-    [HttpGet]
+    [HttpGet("bus-company/{busCompany}")]
     public async Task<IActionResult> GetAllPaymentsByBusCompany(string busCompany)
     {
         var getAllPaymentsByBusCompanyQuery = new GetAllPaymentsByBusCompany(busCompany);
