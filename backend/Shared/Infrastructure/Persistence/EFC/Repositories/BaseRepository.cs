@@ -9,7 +9,7 @@ public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where T
     protected readonly AppDbContext Context;
     protected BaseRepository(AppDbContext context) => Context = context;
 
-    public async Task AddSync(TEntity entity) => await Context.Set<TEntity>().AddAsync(entity);
+    public async Task AddAsync(TEntity entity) => await Context.Set<TEntity>().AddAsync(entity);
     public async Task<TEntity?> FindByIdAsync(int id) => await Context.Set<TEntity>().FindAsync(id);
     
     public void Update(TEntity entity) => Context.Set<TEntity>().Update(entity);

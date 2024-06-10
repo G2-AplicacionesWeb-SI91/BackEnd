@@ -4,7 +4,7 @@ public interface IBaseRepository<TEntity>
 {
     //CRUD
     //Insert
-    Task AddSync(TEntity entity);
+    Task AddAsync(TEntity entity);
 
     //Get - Select
     Task<TEntity?> FindByIdAsync(int id);
