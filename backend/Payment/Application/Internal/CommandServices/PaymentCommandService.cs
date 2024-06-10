@@ -10,7 +10,7 @@ public class PaymentCommandService(IPaymentRepository paymentRepository, UnitOfW
     public async Task<Domain.Model.Aggregates.Payment?> Handle(CreatePaymentCommand command)
     {
         var payment = new Domain.Model.Aggregates.Payment(command.Id, command.BusCompany, command.Origin, command.Destination, command.MoneyAmount, command.PaymentMethod);
-        await paymentRepository.AddSync(payment);
+        await paymentRepository.AddAsync(payment);
         await unitOfWork.CompleteAsync();
         return payment;
     }
