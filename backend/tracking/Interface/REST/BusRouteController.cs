@@ -13,26 +13,46 @@ public class BusRouteController(
     IBusRouteQueryService busRouteQueryService
     ) : ControllerBase
 {
-    // [HttpGet("{busRouteId:int}")]
-    // [SwaggerOperation(
-    //     Summary = "Get a bus route by id",
-    //     Description = "Gets a bus route for a given identifier",
-    //     OperationId = "GetBusRouteById")]
-    // [SwaggerResponse(200, "The category was found", typeof(BusRouteResource))]
-    // public async Task<IActionResult> GetBusRouteById(int busRouteId)
-    // {
-    //     var getBusRouteByIdQuery = new GetBusRouteByIdQuery(busRouteId);
-    //     var busRoute = await busRouteQueryService.Handle(getBusRouteByIdQuery);
-    //     var resource = BusRouteResourceFromEntityAssembler.ToResourceFromEntity(busRoute);
-    //     return Ok(resource);
-    // }
+    
+    [HttpGet("{busName}")]
+    [SwaggerOperation(
+        Summary = "Get a bus route id by name",
+        Description = "Gets a bus route name for a given identifier",
+        OperationId = "GetBusRouteIdByName")]
+    [SwaggerResponse(200, "The Bus Route Id was found", typeof(BusRouteResource))]
+    public async Task<ActionResult<int?>> GetBusRouteIdByName(string busName)
+    {
+        var query = new GetBusRouteIdByBusName(busName);
+        var busRoute = await busRouteQueryService.Handle(query);
+        
+        if (busRoute == null)
+        {
+            return NotFound();
+        }
+        return Ok(busRoute.Id);
+    }
+    
+    
+    [HttpGet("{busRouteId:int}")]
+    [SwaggerOperation(
+        Summary = "Get a bus route by id",
+        Description = "Gets a bus route for a given identifier",
+        OperationId = "GetBusRouteById")]
+    [SwaggerResponse(200, "The Bus Route was found", typeof(BusRouteResource))]
+    public async Task<IActionResult> GetBusRouteById(int busRouteId)
+    {
+        var getBusRouteByIdQuery = new GetBusRouteByIdQuery(busRouteId);
+        var busRoute = await busRouteQueryService.Handle(getBusRouteByIdQuery);
+        var resource = BusRouteResourceFromEntityAssembler.ToResourceFromEntity(busRoute);
+        return Ok(resource);
+    }
 
     [HttpGet]
     [SwaggerOperation(
         Summary = "Gets all bus routes",
         Description = "Gets all bus routes",
         OperationId = "GetAllBusRoutes")]
-    [SwaggerResponse(200, "The categories were found", typeof(IEnumerable<BusRouteResource>))]
+    [SwaggerResponse(200, "Bus Routes were found", typeof(IEnumerable<BusRouteResource>))]
     public async Task<IActionResult> GetAllBusRoutes()
     {
         var getAllBusRoutes = new GetAllBusRoutesQuery();
@@ -40,6 +60,7 @@ public class BusRouteController(
         var resources = busRoutes.Select(BusRouteResourceFromEntityAssembler.ToResourceFromEntity);
         return Ok(resources);
     }
+    
 
     [HttpPost]
     [SwaggerOperation(
@@ -53,7 +74,6 @@ public class BusRouteController(
         if (busRoute is null) return BadRequest();
         var busRouteResource = BusRouteResourceFromEntityAssembler.ToResourceFromEntity(busRoute);
         return Ok(busRouteResource);
-
     }
 
 }

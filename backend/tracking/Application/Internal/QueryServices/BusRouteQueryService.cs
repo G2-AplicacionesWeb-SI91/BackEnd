@@ -6,14 +6,15 @@ public class BusRouteQueryService(IBusRouteRepository busRouteRepository) : IBus
     {
         return await busRouteRepository.ListAsync();
     }
-
-    public async Task<BusRoute?> Handle(GetBusRouteByDistanceQuery query)
-    {
-        return await busRouteRepository.FindBusRouteByDistanceAsync(query.distance);
-    }
+    
 
     public async Task<BusRoute?> Handle(GetBusRouteByIdQuery query)
     {
         return await busRouteRepository.FindByIdAsync(query.busRouteId);
+    }
+    
+    public async Task<BusRoute?> Handle(GetBusRouteIdByBusName query)
+    {
+        return await busRouteRepository.FindBusRouteIdByNameAsync(query.BusName);
     }
 }

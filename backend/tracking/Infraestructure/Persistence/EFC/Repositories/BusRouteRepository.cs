@@ -7,8 +7,8 @@ namespace backend.tracking;
 
 public class BusRouteRepository(AppDbContext context) : BaseRepository<BusRoute>(context), IBusRouteRepository
 {
-    public Task<BusRoute?> FindBusRouteByDistanceAsync(string distance)
+    public Task<BusRoute?> FindBusRouteIdByNameAsync(string busName)
     {
-        return Context.Set<BusRoute>().Where(b => b.TotalDistance == distance).FirstOrDefaultAsync();
+        return Context.Set<BusRoute>().FirstOrDefaultAsync(b => b.BusName == busName);
     }
 }

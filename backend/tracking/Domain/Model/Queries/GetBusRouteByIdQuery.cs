@@ -1,6 +1,3 @@
 namespace backend.tracking;
 
-public record GetBusRouteByIdQuery(int busRouteId)
-{
-    
-}
+public record GetBusRouteByIdQuery(int busRouteId);
