@@ -6,8 +6,11 @@ public class BusRouteResourceFromEntityAssembler
     {
         return new BusRouteResource(
             entity.Id,
-            entity.Origin,
-            entity.Destination,
+            entity.BusName,
+            entity.OriginName,
+            entity.OriginCoord,
+            entity.DestinationName,
+            entity.DestinationCoord,
             entity.TotalDistance
         );
     }

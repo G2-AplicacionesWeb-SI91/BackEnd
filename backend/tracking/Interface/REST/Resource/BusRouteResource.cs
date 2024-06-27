@@ -1,3 +1,11 @@
 namespace backend.tracking;
 
-public record BusRouteResource(int Id, Coordinate Origin, Coordinate Destination, Distance TotalDistance);
+public record BusRouteResource(
+    int Id, 
+    string BusName,
+    string OriginName,
+    string OriginCoord,
+    string DestinationName,
+    string DestinationCoord,
+    string TotalDistance
+    );

@@ -5,12 +5,12 @@ public class CreateBusRouteCommandFromResourceAssembler
     public static CreateBusRouteCommand ToCommandFromResource(CreateBusRouteResource resource)
     {
         return new CreateBusRouteCommand(
-            resource.OriginLatitude,
-            resource.OriginLongitude,
-            resource.DestLatitude,
-            resource.DestLongitude,
-            resource.Value,
-            resource.Unit
+            resource.BusName,
+            resource.OriginName,
+            resource.OriginCoord,
+            resource.DestinationName,
+            resource.DestinationCoord,
+            resource.TotalDistance
         );
     }
 }

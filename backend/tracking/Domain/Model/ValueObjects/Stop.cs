@@ -1,4 +1,4 @@
-namespace backend.tracking;
+namespace backend.tracking.Domain.Model.ValueObjects;
 
 public record Stop(Coordinate Location, Address Address, TimeWindow TimeWindow)
 {

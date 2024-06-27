@@ -4,6 +4,6 @@ namespace backend.tracking;
 
 public interface IBusRouteRepository : IBaseRepository<BusRoute>
 {
-    Task<BusRoute?> FindBusRouteByDistanceAsync(Distance distance);
+    Task<BusRoute?> FindBusRouteByDistanceAsync(string distance);
     
 }

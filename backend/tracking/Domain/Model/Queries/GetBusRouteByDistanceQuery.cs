@@ -1,3 +1,3 @@
 namespace backend.tracking;
 
-public record GetBusRouteByDistanceQuery(Distance distance);
+public record GetBusRouteByDistanceQuery(string distance);

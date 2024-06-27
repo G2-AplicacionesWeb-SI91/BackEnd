@@ -3,13 +3,14 @@ namespace backend.tracking;
 public interface IBusRouteContextFacade
 {
     Task<int> CreateBusRoute(
-        string originLatitude,
-        string originLongitude,
-        string destLatitude,
-        string destLongitude,
-        string value,
-        string unit
+        string busName,
+        string originName,
+        string originCoord, 
+        string destinationName,
+        string destinationCoord,
+        string totalDistance
     );
 
-    Task<int> FetchBusRouteIdByDistance(string value, string unit);
+    
+    // Task<string> FetchBusRouteIdByDistance(string distance);
 }

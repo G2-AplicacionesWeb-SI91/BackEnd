@@ -33,11 +33,27 @@ public class BusRouteController(
         Description = "Gets all bus routes",
         OperationId = "GetAllBusRoutes")]
     [SwaggerResponse(200, "The categories were found", typeof(IEnumerable<BusRouteResource>))]
-    public async Task<IActionResult> GetAllCategories()
+    public async Task<IActionResult> GetAllBusRoutes()
     {
         var getAllBusRoutes = new GetAllBusRoutesQuery();
         var busRoutes = await busRouteQueryService.Handle(getAllBusRoutes);
         var resources = busRoutes.Select(BusRouteResourceFromEntityAssembler.ToResourceFromEntity);
         return Ok(resources);
     }
+
+    [HttpPost]
+    [SwaggerOperation(
+        Summary = "Post bus routes",
+        Description = "Post a bus route",
+        OperationId = "PostBusRoute")]
+    public async Task<IActionResult> CreateBusRoute([FromBody] CreateBusRouteResource createBusRouteResource)
+    {
+        var createBusRouteCommand = CreateBusRouteCommandFromResourceAssembler.ToCommandFromResource(createBusRouteResource);
+        var busRoute = await busRouteCommandService.Handle(createBusRouteCommand);
+        if (busRoute is null) return BadRequest();
+        var busRouteResource = BusRouteResourceFromEntityAssembler.ToResourceFromEntity(busRoute);
+        return Ok(busRouteResource);
+
+    }
+
 }
