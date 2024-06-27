@@ -11,4 +11,5 @@ public class BusRouteRepository(AppDbContext context) : BaseRepository<BusRoute>
     {
         return Context.Set<BusRoute>().FirstOrDefaultAsync(b => b.BusName == busName);
     }
+    
 }

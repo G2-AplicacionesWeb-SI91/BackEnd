@@ -32,7 +32,6 @@ public class BusRouteController(
         return Ok(busRoute.Id);
     }
     
-    
     [HttpGet("{busRouteId:int}")]
     [SwaggerOperation(
         Summary = "Get a bus route by id",

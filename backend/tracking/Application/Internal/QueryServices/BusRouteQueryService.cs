@@ -17,4 +17,5 @@ public class BusRouteQueryService(IBusRouteRepository busRouteRepository) : IBus
     {
         return await busRouteRepository.FindBusRouteIdByNameAsync(query.BusName);
     }
+    
 }
