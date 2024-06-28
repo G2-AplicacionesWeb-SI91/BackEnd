@@ -1,3 +1,8 @@
+using backend.payments.Application.Internal.CommandServices;
+using backend.payments.Application.Internal.QueryServices;
+using backend.payments.Domain.Repositories;
+using backend.payments.Domain.Services;
+using backend.payments.Infrastructure.Persistence.EFC.Repositories;
 using backend.Shared.Domain.Repositories;
 using backend.Shared.Infrastructure.Persistence.EFC.Configuration;
 using backend.Shared.Infrastructure.Persistence.EFC.Repositories;
@@ -73,6 +78,11 @@ builder.Services.AddCors(options =>
 
 // Shared Bounded Context Injection Configuration
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Payments Bounded Context Injection Configuration
+builder.Services.AddScoped<IPaymentsRepository, PaymentsRepository>();
+builder.Services.AddScoped<IPaymentsCommandService, PaymentsCommandService>();
+builder.Services.AddScoped<IPaymentsQueryService, PaymentsQueryService>();
 
 // Tracking Bounded Context Injection Configuration
 builder.Services.AddScoped<IBusRouteRepository, BusRouteRepository>();

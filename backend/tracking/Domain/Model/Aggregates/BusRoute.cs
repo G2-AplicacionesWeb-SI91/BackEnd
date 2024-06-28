@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace backend.tracking;
 
 public partial class BusRoute

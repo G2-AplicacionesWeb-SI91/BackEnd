@@ -1,3 +1,4 @@
+using backend.payments.Domain.Model.Aggregates;
 using backend.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using backend.tracking;
 using EntityFrameworkCore.CreatedUpdatedDate.Extensions;
@@ -19,10 +20,18 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         base.OnModelCreating(builder);
         
         
-        
         // BusRoute Context
         builder.Entity<BusRoute>().HasKey(b => b.Id);
         builder.Entity<BusRoute>().Property(b => b.Id).IsRequired().ValueGeneratedOnAdd();
+        
+        // Payments Context
+        builder.Entity<Payment>().HasKey(p => p.Id);
+        builder.Entity<Payment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Payment>().Property(p => p.BusName).IsRequired();
+        builder.Entity<Payment>().Property(p => p.OriginName).IsRequired();
+        builder.Entity<Payment>().Property(p => p.DestinationName).IsRequired();
+        builder.Entity<Payment>().Property(p => p.TicketPrice).IsRequired();
+        
         
         // builder.Entity<BusRoute>().OwnsOne(b => b., n =>
         // {

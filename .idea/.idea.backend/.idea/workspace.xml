@@ -10,68 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dd8b2ff-c063-4e4d-b433-d83d8d139dd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Application/Internal/CommandServices/BusRouteCommandService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Application/Internal/QueryServices/BusRouteQueryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/Aggregates/BusRoute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/Aggregates/BusRouteAudit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/Commands/CreateBusRouteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/Queries/GetAllBusRoutesQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/Queries/GetBusRouteByDistanceQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/Queries/GetBusRouteByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/ValueObjects/Address.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/ValueObjects/Coordinate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/ValueObjects/Distance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/ValueObjects/Stop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Model/ValueObjects/TimeWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Repositories/IBusRouteRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Services/IBusRouteCommandService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Domain/Services/IBusRouteQueryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Infraestructure/Persistence/EFC/Repositories/BusRouteRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/ACL/IBusRouteContextFacade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/ACL/Services/BusRouteContextFacade.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/REST/BusRouteController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/REST/Resource/BusRouteResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/REST/Resource/CreateBusRouteResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/REST/Transform/BusRouteResourceFromEntityAssembler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tracking/Interface/REST/Transform/CreateBusRouteCommandFromResourceAssembler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Shared/Domain/Repositories/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Shared/Domain/Repositories/IBaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Shared/Infrastructure/Persistence/EFC/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Shared/Infrastructure/Persistence/EFC/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/AddLocationCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/CancelTrackingCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/PauseTrackingCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/ResumeTrackingCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/StartTrackingCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/CommandServices/StopTrackingCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/QueryService/GetAllRoutesQueryHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/QueryService/GetRouteByIdQueryHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Application/Internal/QueryService/GetRoutesByDateRangeQueryHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Aggregates/BusRoute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Aggregates/Location.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Aggregates/Route.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/AddLocationCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/CancelTrackingCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/PauseTrackingCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/ResumeTrackingCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/StartTrackingCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Commands/StopTrackingCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Entities/BusRoute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Entities/Location.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Queries/GetAllRoutesQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Queries/GetRouteByIdQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/Queries/GetRoutesByDateRangeQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/BusRouteStatus.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/GeoCoordinate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/ITrackeable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Model/ValueObjects/TimeRange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Repositories/IRouteRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Domain/Services/EventStore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Infrastructure/Persistence/EFC/Repositories/EFRouteRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Tracking/Infrastructure/Persistence/EFC/TrackingDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +38,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/3f1acb59718cadf111a0a796681e3d3509bb3381/src/Http/Routing/src/Route.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/3f1acb59718cadf111a0a796681e3d3509bb3381/src/Mvc/Mvc.Core/src/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/6a2be34d045329d9eff9536ec824226696d53e00/src/EFCore/DbContextOptions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -129,9 +67,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\ARIAN\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\ARIAN\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\ARIAN\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\arianrm\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\arianrm\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\arianrm\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -194,7 +132,10 @@
       <workItem from="1717910982236" duration="13751000" />
       <workItem from="1717968611434" duration="11313000" />
       <workItem from="1717999812888" duration="7958000" />
-      <workItem from="1718010707913" duration="4819000" />
+      <workItem from="1718010707913" duration="5029000" />
+      <workItem from="1719443663745" duration="15968000" />
+      <workItem from="1719480459822" duration="922000" />
+      <workItem from="1719529409830" duration="2623000" />
     </task>
     <servers />
   </component>
