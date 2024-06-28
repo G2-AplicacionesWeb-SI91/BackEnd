@@ -9,6 +9,7 @@ public static class NotificationResourceFromEntityAssembler
     {
         return new NotificationResource(
             entity.Id,
-            entity.NotificationDetails);
+            entity.NotificationDetails.Title,
+            entity.NotificationDetails.Description);
     }
 }

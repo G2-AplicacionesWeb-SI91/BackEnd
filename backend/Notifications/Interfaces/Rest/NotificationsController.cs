@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using backend.Notifications.Domain.Model.Queries;
 using backend.Notifications.Domain.Services;
 using backend.Notifications.Interfaces.Rest.Resources;
@@ -8,6 +9,7 @@ namespace backend.Notifications.Interfaces.Rest;
 
 [ApiController]
 [Route("api/v1/notifications")]
+[Produces(MediaTypeNames.Application.Json)]
 public class NotificationsController(INotificationCommandService notificationCommandService, INotificationQueryService notificationQueryService) : ControllerBase
 {
     [HttpPost]

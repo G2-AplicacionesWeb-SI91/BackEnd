@@ -1,3 +1,3 @@
 namespace backend.Notifications.Interfaces.Rest.Resources;
 
-public record CreateNotificationResource(int Id, string Title, string Description);
+public record CreateNotificationResource(string Title, string Description);

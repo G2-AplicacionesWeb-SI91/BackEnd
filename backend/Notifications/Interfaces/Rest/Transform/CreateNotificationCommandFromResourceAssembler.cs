@@ -7,6 +7,6 @@ public static class CreateNotificationCommandFromResourceAssembler
 {
     public static CreateNotificationCommand ToCommandFromResource(CreateNotificationResource resource)
     {
-        return new CreateNotificationCommand(resource.Id, resource.Title, resource.Description);
+        return new CreateNotificationCommand(resource.Title, resource.Description);
     }
 }

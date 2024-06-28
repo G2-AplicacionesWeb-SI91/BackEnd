@@ -10,10 +10,18 @@ public class NotificationCommandService(INotificationRepository notificationRepo
 {
     public async Task<Notification?> Handle(CreateNotificationCommand command)
     {
-        var notification = new Notification(command.Id, command.Title, command.Description);
-        await notificationRepository.AddAsync(notification);
-        await unitOfWork.CompleteAsync();
-        return notification;
+        var notification = new Notification(command.Title, command.Description);
+        try
+        {
+            await notificationRepository.AddAsync(notification);
+            await unitOfWork.CompleteAsync();
+            return notification;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error ocurred while creating the notification: " + e.Message);
+            return null;
+        }
     }
 
     public Task Handle(DeleteNotificationCommand command)
