@@ -1,4 +1,4 @@
-using backend.Promos.Domain.Model.Entities;
+using backend.Promos.Domain.Model.Aggregates;
 using backend.Promos.Domain.Model.Queries;
 using backend.Promos.Domain.Repositories;
 using backend.Promos.Domain.Services;
@@ -15,5 +15,10 @@ public class PromoQueryService(IPromoRepository promoRepository) : IPromoQuerySe
     public async Task<IEnumerable<Promo>> Handle(GetPromoByTitleQuery query)
     {
         return await promoRepository.FindByTitleAsync(query.Title);
+    }
+    
+    public async Task<IEnumerable<Promo>> Handle(GetAllPromosQuery query)
+    {
+        return await promoRepository.ListAsync();
     }
 }

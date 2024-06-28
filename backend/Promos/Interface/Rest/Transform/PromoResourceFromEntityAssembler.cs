@@ -1,4 +1,4 @@
-using backend.Promos.Domain.Model.Entities;
+using backend.Promos.Domain.Model.Aggregates;
 using backend.Promos.Interface.Rest.Resources;
 
 namespace backend.Promos.Interface.Rest.Transform;

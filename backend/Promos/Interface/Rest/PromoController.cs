@@ -20,6 +20,15 @@ public class PromoController(IPromoCommandService promoCommandService, IPromoQue
         return CreatedAtAction(nameof(GetPromoById), new { promoId = resource.Id }, resource);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAllPromos()
+    {
+        var getAllPromosQuery = new GetAllPromosQuery();
+        var promos = await promoQueryService.Handle(new GetAllPromosQuery());
+        var resources = promos.Select(PromoResourceFromEntityAssembler.ToResourceFromEntity);
+        return Ok(resources);
+    }
+    
     [HttpGet("{promoId:int}")]
     public async Task<IActionResult> GetPromoById([FromRoute] int promoId)
     {

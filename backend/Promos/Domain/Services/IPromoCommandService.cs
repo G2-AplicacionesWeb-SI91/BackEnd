@@ -1,5 +1,5 @@
 using backend.Promos.Domain.Model.Commands;
-using backend.Promos.Domain.Model.Entities;
+using backend.Promos.Domain.Model.Aggregates;
 
 namespace backend.Promos.Domain.Services;
 
