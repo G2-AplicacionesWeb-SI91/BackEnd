@@ -87,8 +87,6 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
        // Notification Context
         builder.Entity<Notification>().HasKey(n => n.Id);
         builder.Entity<Notification>().Property(n => n.Id).ValueGeneratedOnAdd().IsRequired();
-        builder.Entity<Notification>().Property(n => n.NotificationDetails.Title).IsRequired();
-        builder.Entity<Notification>().Property(n => n.NotificationDetails.Description).IsRequired();
         
         
         base.OnModelCreating(builder);
