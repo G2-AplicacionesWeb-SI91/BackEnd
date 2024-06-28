@@ -15,7 +15,6 @@ public class KebabCaseRouteNamingConvention : IControllerModelConvention
             }
             : null;
     }
-
     public void Apply(ControllerModel controller)
     {
         foreach (var selector in controller.Selectors)

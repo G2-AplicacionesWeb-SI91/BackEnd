@@ -1,9 +1,9 @@
 
-using backend.Notifications.Domain.Model.Aggregates;
-using backend.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using backend.payments.Domain.Model.Aggregates;
+
 using backend.IAM;
 using backend.Profiles;
+
 using backend.Shared.Infrastructure.Persistence.EFC.Configuration.Extensions;
 using backend.tracking;
 using backend.Promos.Domain.Model.Aggregates;
@@ -83,16 +83,9 @@ public class AppDbContext(DbContextOptions options) : DbContext(options)
         builder.Entity<Promo>().Property(t => t.Title).IsRequired().HasMaxLength(50);
         builder.Entity<Promo>().Property(t => t.Description).HasMaxLength(240);
         
-      
-       // Notification Context
-        builder.Entity<Notification>().HasKey(n => n.Id);
-        builder.Entity<Notification>().Property(n => n.Id).ValueGeneratedOnAdd().IsRequired();
-        builder.Entity<Notification>().Property(n => n.NotificationDetails.Title).IsRequired();
-        builder.Entity<Notification>().Property(n => n.NotificationDetails.Description).IsRequired();
-        
         
         base.OnModelCreating(builder);
-
+       
 
         // Apply SnakeCase Naming Convention
         builder.UseSnakeCaseWithPluralizedTableNamingConvention();
