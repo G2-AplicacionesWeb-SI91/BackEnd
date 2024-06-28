@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices.Marshalling;
 using backend.Promos.Domain.Model.Commands;
-using backend.Promos.Domain.Model.Entities;
+using backend.Promos.Domain.Model.Aggregates;
 using backend.Promos.Domain.Repositories;
 using backend.Promos.Domain.Services;
 using backend.Shared.Domain.Repositories;
@@ -20,7 +20,7 @@ public class PromoCommandService(IPromoRepository promoRepository, IUnitOfWork u
         }
         catch (Exception e)
         {
-            throw new Exception("An error ocurred while trying to add the new Crop, ", e);
+            throw new Exception("An error ocurred while trying to add the new Promo, ", e);
         }
     }
 }

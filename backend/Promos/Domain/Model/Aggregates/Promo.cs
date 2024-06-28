@@ -1,6 +1,6 @@
 using backend.Promos.Domain.Model.Commands;
 
-namespace backend.Promos.Domain.Model.Entities;
+namespace backend.Promos.Domain.Model.Aggregates;
 
 public class Promo
 {
