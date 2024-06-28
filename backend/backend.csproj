@@ -23,6 +23,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="payments\Domain\Model\Entities\" />
+      <Folder Include="payments\Domain\Model\ValueObjects\" />
       <Folder Include="Shared\Interfaces\" />
       <Folder Include="tracking\Domain\Model\Entities\" />
       <Folder Include="Promos\Domain\Model\Entities\" />
