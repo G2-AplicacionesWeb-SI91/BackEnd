@@ -8,8 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
         <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
         <PackageReference Include="Humanizer" Version="2.14.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.6" />
@@ -17,14 +19,15 @@
         <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.6.2" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="payments\Domain\Model\Entities\" />
+      <Folder Include="payments\Domain\Model\ValueObjects\" />
       <Folder Include="Shared\Interfaces\" />
-      <Folder Include="Tracking\Application\" />
-      <Folder Include="Tracking\Domain\" />
-      <Folder Include="Tracking\Infrastructure\" />
-      <Folder Include="Tracking\Interfaces\" />
+      <Folder Include="tracking\Domain\Model\Entities\" />
+      <Folder Include="Promos\Domain\Model\Entities\" />
     </ItemGroup>
 
 </Project>
