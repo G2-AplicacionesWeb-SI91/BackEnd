@@ -22,6 +22,7 @@
     <ItemGroup>
       <Folder Include="Shared\Interfaces\" />
       <Folder Include="tracking\Domain\Model\Entities\" />
+      <Folder Include="Promos\Domain\Model\Entities\" />
     </ItemGroup>
 
 </Project>

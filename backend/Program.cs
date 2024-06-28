@@ -1,13 +1,25 @@
+
 using backend.Shared.Domain.Repositories;
 using backend.Shared.Infrastructure.Persistence.EFC.Configuration;
 using backend.Shared.Infrastructure.Persistence.EFC.Repositories;
-using backend.Shared.Interfaces.ASP.Configuration;
 using backend.tracking;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using backend.Promos.Application.Internal.CommandServices;
+using backend.Promos.Application.Internal.QueryServices;
+using backend.Promos.Domain.Repositories;
+using backend.Promos.Domain.Services;
+using backend.Shared.Infrastructure.Interfaces.ASP.Configuration;
+using backend.Shared.Infrastructure.Persistence.EFC.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddControllers(options =>
+    {
+    options.Conventions.Add(new KebabCaseRouteNamingConvention());
+});
 // Add services to the container.
 
 builder.Services.AddControllers(options => options.Conventions.Add(new KebabCaseRouteNamingConvention()));
@@ -79,12 +91,48 @@ builder.Services.AddScoped<IBusRouteRepository, BusRouteRepository>();
 builder.Services.AddScoped<IBusRouteCommandService, BusRouteCommandService>();
 builder.Services.AddScoped<IBusRouteQueryService, BusRouteQueryService>();
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(
+    options =>
+    {
+        if(connectionString != null)
+            if(builder.Environment.IsDevelopment())
+                options.UseMySQL(connectionString)
+                    .LogTo(Console.WriteLine, LogLevel.Information)
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors();
+            else if (builder.Environment.IsProduction())
+                options.UseMySQL(connectionString)
+                    .LogTo(Console.WriteLine, LogLevel.Error)
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors();
+    });
+
+
+//Configura LowerCase URLS
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+
+builder.Services.AddControllers(options =>
+{
+    options.Conventions.Add(new KebabCaseRouteNamingConvention());
+});
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddScoped<IPromoRepository, PromoRepository>();
+builder.Services.AddScoped<IPromoCommandService, PromoCommandService>();
+builder.Services.AddScoped<IPromoQueryService, PromoQueryService>();
+
+
 var app = builder.Build();
+
 
 // Verify Database Objects are created
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
+
     var context = services.GetRequiredService<AppDbContext>();
     context.Database.EnsureCreated();
 }
@@ -95,15 +143,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseCors("AllowAllPolicy");
 
-
-
 app.UseHttpsRedirection();
+app.UseAuthorization();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
