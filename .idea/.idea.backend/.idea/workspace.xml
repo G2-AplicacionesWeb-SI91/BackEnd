@@ -9,21 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dd8b2ff-c063-4e4d-b433-d83d8d139dd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Application/Internal/CommandServices/PromoCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Application/Internal/CommandServices/PromoCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Application/Internal/QueryServices/PromoQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Application/Internal/QueryServices/PromoQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Domain/Model/Entities/Promo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Domain/Model/Aggregates/Promo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Domain/Repositories/IPromoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Domain/Repositories/IPromoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Domain/Services/IPromoCommandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Domain/Services/IPromoCommandService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Domain/Services/IPromoQueryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Domain/Services/IPromoQueryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Infrastructure/Persistence/EFC/Repositories/PromoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Infrastructure/Persistence/EFC/Repositories/PromoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Interface/Rest/PromoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Interface/Rest/PromoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Promos/Interface/Rest/Transform/PromoResourceFromEntityAssembler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Promos/Interface/Rest/Transform/PromoResourceFromEntityAssembler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Shared/Infrastructure/Persistence/EFC/Configuration/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="2dd8b2ff-c063-4e4d-b433-d83d8d139dd6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +123,7 @@
       <workItem from="1719453670331" duration="159000" />
       <workItem from="1719454067991" duration="2648000" />
       <workItem from="1719538712076" duration="3531000" />
+      <workItem from="1719559999525" duration="393000" />
     </task>
     <servers />
   </component>
