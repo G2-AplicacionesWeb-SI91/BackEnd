@@ -9,7 +9,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace backend.Notifications.Interfaces.Rest;
 
 [ApiController]
-[Route("api/v1/notifications")]
+[Route("api/v1/[controller]")]
 [Produces(MediaTypeNames.Application.Json)]
 public class NotificationsController(INotificationCommandService notificationCommandService, INotificationQueryService notificationQueryService) : ControllerBase
 {
